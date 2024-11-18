@@ -4,7 +4,7 @@ import React from "react";
 import Rating from "../(components)/Rating";
 
 const CardPopularProducts = () => {
-  const { data: dashBoardMetrics, isLoading } = useGetDashboardMetricsQuery();
+  const { data: dashboardMetrics, isLoading } = useGetDashboardMetricsQuery();
 
   return (
     <div className="row-span-3 xl:row-span-6 bg-white shadow-md rounded-2xl pb-16">
@@ -17,10 +17,10 @@ const CardPopularProducts = () => {
           </h3>
           <hr />
           <div className="overflow-auto h-full">
-            {dashBoardMetrics?.popularProducts.map((product) => (
+            {dashboardMetrics?.popularProducts.map((product) => (
               <div
                 key={product.productId}
-                className="flex items-center justify-between gap-3 px-5 py-7  border-b"
+                className="flex items-center justify-between gap-3 px-5 py-7 border-b"
               >
                 <div className="flex items-center gap-3">
                   <div>img</div>
